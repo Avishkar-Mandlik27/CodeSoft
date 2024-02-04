@@ -1,0 +1,273 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+body{
+    background-color: #bc9e75;
+    font-family: "Source Serif 4", serif;
+
+}
+
+.navigation{
+    position: sticky;
+    z-index: 100;
+    top: 0px;
+    display: flex;
+}
+.nav{
+    height: 40%;
+    width: 100%;
+    background-color: black;
+    color: #bc9e75;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+}
+.nav h2{
+    font-family: "Philosopher", sans-serif;
+    font-weight: 600;
+    letter-spacing: 4px;
+    word-spacing: 8px;
+    color:white;
+    text-align: center;
+}
+
+.logo{
+   /* overflow: hidden;  Ensures the content is not revealed until the animation 
+    border-right: .15em solid orange; The typwriter cursor 
+    white-space: nowrap;  Keeps the content on a single line 
+    margin: 0 auto;  Gives that scrolling effect as the typing happens 
+    letter-spacing: .15em;  Adjust as needed 
+    animation: 
+      typing2 3.5s steps(10, end),
+      blink-caret .75s step-end infinite; */
+}
+.nav2 {
+    display: flex;
+    justify-content:center;
+    align-items: center
+}
+
+.nav2 h3{
+    padding: 0px 34px;
+    font-family: "Cinzel", serif;
+    letter-spacing: 2px;
+}
+
+.nav2 h3 a{
+    color: #bc9e75;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav2 h3 a::after{
+    content: "";
+    position: absolute;
+    background-color: #bc9e75;
+    height: 3px;
+    width: 0%;
+    left: 0%;
+    bottom: -3px;
+    transition: 0.7s;
+    border-radius: 50px;
+}
+
+.nav2 h3 a:hover{
+    color: white;
+}
+
+
+.nav2 h3 a:hover:after{
+    width: 100%;
+}
+
+
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: #bc9e75;
+}
+
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 54px;
+    padding-top: 150px;
+} 
+
+.info h3{
+    font-size: 36px;
+    font-family: "Cinzel", serif;
+    padding: 18px 20px 20px;
+    word-spacing: 6px;
+}
+
+.info h1 {
+    font-size: 60px;
+    font-family: "Philosopher", serif;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-weight: 300;
+    color:#bc9e75; 
+    padding: 6px 15px;
+    background-color: black;  
+
+
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+     
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes typing2 {
+    from { width: 0 }
+    to { width: 50% }
+  }
+
+  
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+
+.info h1:nth-child(2)::first-letter{
+    font-size: 90px;
+}
+
+
+.photo{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.landing{
+    display: flex;
+    height: 100vh;
+    width: fit-content;
+    position: relative;
+    /* left: 130%; */
+}
+
+.landinghover{
+    
+    height: 100vh;
+    width: 114%;
+    width: fit-content;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    transition: 0.7s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.landinghover::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    height: 100vh;
+    width: 110%;
+    background-color: magenta;
+    z-index: 0;
+    opacity: 0;
+}
+
+.landinghover:hover{
+    opacity: 1;
+}
+
+.button{
+    background-color: black;
+    color: #bc9e75;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: "Cinzel", serif;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin: 25px 8px;
+    cursor: pointer;
+}
+
+.button::after{
+    content: "";
+    position: absolute;
+    background-color: #bc9e75;
+    height: 3px;
+    width: 0%;
+    left: 0%;
+    bottom: 3px;
+    transition: 0.7s;
+    border-radius: 50px;
+}
+
+.button:hover{
+    color: white;
+}
+
+
+.button:hover:after{
+    width: 100%;
+}
+
+
+
+/* .home a{
+    color: #bc9e75;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.home a::before{
+    content: "";
+    background-color: #bc9e75;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom:0%;
+}
+
+.home a:hover{
+    content: "";
+    background-color: #bc9e75;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom:0%
+} */
